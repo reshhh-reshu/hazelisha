@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4ed">
+<title>For Hazel, With Appreciation 🌷</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600;700&display=swap');
+:root{--cream:#fff8ef;--pink:#f6dce3;--rose:#b85d76;--sage:#dce8d5;--green:#567253;--yellow:#f8e8a9;--ink:#51444a;--paper:#fffdf8}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:'DM Sans',sans-serif;background-color:var(--cream);background-image:radial-gradient(#e7b8c5 1px,transparent 1px),radial-gradient(#d0ddc5 1px,transparent 1px);background-position:0 0,18px 18px;background-size:36px 36px;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.app{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 20px;position:relative}
+.topline{width:min(900px,100%);display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 auto 16px}
+.brand{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--rose);font-weight:700}
+.counter{font-size:.82rem;color:#8b747c;background:#fffdf8d9;border:1px solid #f0dbe0;padding:8px 12px;border-radius:999px}
+.book{width:min(760px,100%);min-height:min(690px,calc(100vh - 180px));display:flex;align-items:stretch;position:relative}
+.page{position:relative;width:100%;background:var(--paper);border:1px solid #eaded2;border-radius:7px 20px 20px 7px;box-shadow:0 18px 50px #775b4a20,0 4px 0 #f4e8dc;overflow:hidden;padding:clamp(24px,5vw,54px);display:flex;flex-direction:column;align-items:center;text-align:center;animation:arrive .35s ease both}
+.page:before{content:"";position:absolute;inset:12px;border:1px dashed #e8c9c9;border-radius:4px;pointer-events:none}
+.page:after{content:"";position:absolute;width:150px;height:150px;right:-48px;top:-48px;border-radius:50%;background:#f6dce388;pointer-events:none}
+@keyframes arrive{from{opacity:0;transform:translateY(8px) rotate(.4deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+.flower{font-size:clamp(2.2rem,6vw,3.5rem);line-height:1;margin:10px 0 18px;filter:drop-shadow(2px 4px 0 #f8e7dc)}
+.eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green);margin:4px 0 12px}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600;line-height:1.12;margin:0}
+h1{font-size:clamp(2.5rem,7vw,4.8rem);color:#a94f6c}
+h2{font-size:clamp(2rem,5vw,3.15rem);color:#a94f6c}
+.script{font-family:'Caveat',cursive;color:var(--green);font-size:clamp(1.4rem,4vw,2rem);margin:14px 0}
+.cover-copy{font-size:1rem;line-height:1.8;max-width:480px;margin:14px auto 24px}
+.sticker{display:inline-block;background:var(--yellow);padding:8px 15px;border-radius:4px;transform:rotate(-3deg);font-family:'Caveat',cursive;font-size:1.3rem;margin:8px 0 22px}
+.primary,.secondary{border:0;border-radius:999px;padding:13px 22px;font-weight:700;transition:transform .2s,box-shadow .2s}
+.primary{background:var(--rose);color:white;box-shadow:0 5px 0 #91465c}
+.secondary{background:#e7efdf;color:#456443}
+.primary:hover,.secondary:hover{transform:translateY(-2px)}
+.message-page{align-items:stretch;text-align:left}
+.message-head{text-align:center;position:relative;z-index:1}
+.message-head .flower{font-size:2rem;margin:2px 0 10px}
+.message-head h2{font-size:clamp(1.9rem,5vw,2.8rem)}
+.message-tag{font-family:'Caveat',cursive;color:var(--green);font-size:1.4rem;margin:9px 0 20px;text-align:center}
+.message-body{position:relative;z-index:1;white-space:pre-wrap;overflow-wrap:anywhere;font-size:clamp(.96rem,2vw,1.07rem);line-height:1.85;text-align:left;margin:0 auto;width:100%;max-width:620px;padding:clamp(15px,3vw,28px);background:linear-gradient(180deg,#fffaf0,#fffdf8);border-radius:12px;border:1px solid #f1e5d9;box-shadow:inset 0 0 0 4px #fff}
+.message-body.short{font-family:'Caveat',cursive;text-align:center;font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.45;background:#f8e5e8;transform:rotate(-1deg);margin:auto 0}
+.message-body.long{font-size:clamp(.9rem,1.8vw,1rem);line-height:1.75}
+.message-footer{font-family:'Caveat',cursive;font-size:1.3rem;color:#a96b7c;text-align:center;margin:16px 0 0}
+.nav{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0 4px}
+.nav button:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.dots{display:flex;justify-content:center;gap:7px;margin:10px 0 0;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;border:0;background:#e5c7ce;padding:0}
+.dot.active{background:var(--rose);transform:scale(1.35)}
+.footer-note{font-size:.78rem;color:#927d82;text-align:center;margin-top:12px}
+.decor{position:fixed;font-size:22px;opacity:.55;pointer-events:none;animation:float 5s ease-in-out infinite}
+.decor.one{top:15%;left:4%}.decor.two{bottom:15%;right:5%;animation-delay:1s}.decor.three{top:48%;right:2%;animation-delay:2s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-12px) rotate(8deg)}}
+@media(max-width:520px){.app{padding:14px 10px}.topline{margin-bottom:10px}.book{min-height:calc(100vh - 170px)}.page{padding:25px 21px}.page:before{inset:8px}.message-body{padding:15px}.nav{gap:8px}.primary,.secondary{padding:12px 17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<span class="decor one">🌼</span><span class="decor two">🌷</span><span class="decor three">✿</span>
+<main class="app">
+  <header class="topline"><div class="brand">little things, big love ✿</div><div class="counter" id="counter">Cover</div></header>
+  <section class="book" aria-live="polite"><article class="page" id="page"></article></section>
+  <nav class="nav" id="nav" hidden aria-label="Scrapbook navigation">
+    <button class="secondary" id="prev">← Previous</button>
+    <button class="primary" id="next">Next page →</button>
+  </nav>
+  <div class="dots" id="dots" hidden aria-label="Choose a page"></div>
+  <p class="footer-note">made with care, for Hazel 🌸</p>
+</main>
+<script>
+const messages = [
+  {name:"Maryam", text:`halu hazelllll, i hope you know how much i loved you as the ketua for this chem project !!! honestly when you and kav first asked if i wanted to join i felt sooo happy bcs you trusted me enough to be apart of this, after such a tiring day you asked me if i can point out any flaws of yours as a ketua i genuinely meant it when i said i cannot bcs you were such an inspiring ketua. youre so passionate and so patient and very very funny throughout the whole process of the chem n click thing. i know things were very very hard for you especially organising, planning all of this and you kept asking for our opinions and kept your options open for ours! I had so much fun with you even during serious times when we’re panicking and all. i had so so much fun and i cant help but really admire you as a leader. you made sure everyone felt included and useful even when we werent doing anything, i genuinely think you are such a great leader and as a person youre beyond great hazel !!! i hope you dont beat yourself up bcs cikgu wan was saying mean stuff about you just now because honestly youre more than that. love you lots and lots and thank you so much for letting be apart of this fun project! 💗`},
+  {name:"Anna", text:`Haii Hazel!! I just wanted to say thank you for everything you've done for us! I've genuinely had so much fun, and I'm really grateful that you recruited me just a day before the program and welcomed me into your group to help out. Even though I joined at the very last minute, you were still so kind enough to include me, and I really appreciate that. I know organizing everything wasn't easy and I realised you were stressed at some times, but I hope you know that you did amazing. Every time I saw you step up as a leader, talking and guiding everyone, I genuinely thought, "Wow, Hazel is such a good leader." I really admire you for that, and honestly, you're one of the best leaders I've known so far. I know things don't always go as planned, but please don't blame yourself too much or let this experience make you feel like you weren't good enough, because you really did your best. Once again, thank you for welcoming me and for everything you've done for the group. I'm really glad I got the chance to be part of this, and I hope you know that your efforts didn't go unnoticed. And  of course, if you ever need an extra hand with anything, I'll always be happy to help whenever I can. Please don't stress yourself out too much, okay? You did so well yah Hazel!!`},
+  {name:"Kaveya", text:`hello machaaa , today was truly an amazing day for me and i would say to all of us . because of you , we executed all of our ideas well because of your help macha . 
+you are an amazing leader to all of us . you are wise , patient , understanding , kind , caring and loving to all of us . even though you were the leader , you didn't make us feel like we are under you . you listened to our plans , opinions and our ideas . you gave us all the freedom of speech.
+you were fair and such a strong girl in our team . somehow you did everything with such ease . 
+hopefully one day I'll be able to be this type of leader.
+you are so so worthy to be our leader . no one could've done it like you did macha . I'm telling you from the bottom of my heart .
+no matter if we made a loss or not today , i wouldn't change a thing about today .
+yes i wished we had more pictures together but it's okay cuz we were both very busy . 
+you know how to manage work and personal relationships very well . you were a leader but also a friend too us which is so so comforting to all of us .
+don't worry about what happened today da . teachers will talk but coming from me , hazel alisha is my perfect little angel princess. no matter what i wouldn't have it any other way . love you ______😻`},
+  {name:"Iman", text:`Hey hazel thank you so much for letting me join ur group for chem today even tho it was last minute. Everything went so well today and it’s all because of you, without you leading us and telling us everything what to do esp to me since I was new I think itll be soo chaotic. Despite us being noisy u still kept on leading and ur so amazing for that, ur literally the coolest person ever!! Thank you so much for today honestly, i had so much fun thanks to you 💞💞`},
+  {name:"Tivaa", text:`Hi Hazel!!❤️ I just wanted to appreciate you for everything you did for the camp and CLICK. You genuinely did such a great job organizing everything and making sure everything went accordingly. From reminding everyone to bring their things to making sure every single thing was done, you really put in so much effort. I noticed how you were always the one initiating things, making sure everyone was doing their part and keeping everything together. I know it takes a lot of patience, responsibility and teamwork to handle everything, and you really did your best as a leader. Of course, it wasn't just you alone, but I genuinely believe your effort and initiative played a big part in making everything work out so well. I hope you know that all your hard work doesn't go unnoticed, and you should be proud of yourself for how well you handled everything. Thank you for taking the initiative and putting so much effort into making this happen. You did amazing, Hazel, and I'm genuinely proud of you ____.`},
+  {name:"Aliff", text:`hazel you're a great leader😒`},
+  {name:"Reshmen", text:`Hi our adorable ketua, Hazel, I just wanted to tell you how amazing you were as a leader for our chemistry booth today. ❤️ Like genuinely, I don't think you give yourself enough credit for how well you handled everything. From organising the team and making sure things were running smoothly to keeping everyone involved and making sure everyone knew what they had to do, you did such a wonderful job. Being a leader isn't just about giving instructions or making sure everything gets done on time; it's also about how you treat the people around you, and I think that's where you really stood out. You were so friendly, approachable, and patient with everyone, and you managed to keep things organised without making anyone feel left out or uncomfortable. That's honestly such a special quality to have, because not everyone knows how to balance being responsible with being kind to the people they're leading.
+And what I really admire is how you managed to handle everything while still being yourself. Even with all the things going on, you still had that friendliness and warmth that made working together feel so much easier. I know organising something like this isn't always easy, especially when there are so many little things to think about and so many people depending on you, but you handled it so well. I hope you realise that all the effort you put into this didn't go unnoticed. Every little thing you did to make sure the booth worked out, every bit of planning, every time you helped someone, and every moment you took responsibility for something all mattered. Maybe some people only saw the final result today, but I hope you know that I noticed the effort behind it too.
+Honestly, I'm really proud of you, Hazel. Not just because our booth went well, but because I got to see you take on that responsibility and handle it so beautifully. There's something really admirable about seeing someone put so much effort into something and genuinely care about making it work for everyone. You didn't just make sure the booth was organised; you helped make the whole experience better for the people who were part of it. And I think that's what makes someone a good leader, not just being able to take charge, but being someone others can feel comfortable working with and relying on. You really showed that today, and I hope you never doubt your ability to do things like this, because you genuinely have so much potential.
+And okay, maybe I'm a little biased when it comes to you HAHAHA, but I really do mean every word of this. 😭❤️ I think sometimes we get so caught up in doing things, getting everything done, and making sure everyone else is okay that we forget to stop and appreciate ourselves for a moment. So I hope you take a little time to appreciate yourself today, because you deserve that. You deserve to feel proud of what you accomplished, and you deserve to know that your hard work made a difference. You don't always have to be the one making sure everything is okay for everyone else; I hope you remember that you deserve the same encouragement and appreciation that you give to the people around you.
+I'm really glad I got to be part of this team with you, and I'm glad I got to see this side of you today. It's one thing to know someone is capable of doing something, but it's another thing to actually watch them do it and realise just how good they are at it. And honestly, seeing you lead with so much friendliness, patience, and confidence made me admire you even more. I hope you keep that same spirit wherever life takes you, because I genuinely believe you can do amazing things when you put your heart into them.
+So yeah, Hazel, thank you for being such an amazing leader today. Thank you for putting in the effort, for being patient with everyone, for keeping things organised, and for making the whole experience something worth remembering. You did really, really well, and I hope you know that. And if there's one thing I hope you take away from today, it's that you don't have to be perfect to be an amazing leader; sometimes, simply being the kind of person who cares, puts in the effort, and makes others feel included is more than enough. You were that person today, and I'm genuinely proud of you for it. Keep being you, Hazel. Keep growing, keep shining, and keep becoming the person you're meant to be. And maybe I'm not always going to say it out loud, but seeing you do well and seeing you happy will always mean a little more to me than you might think. ❤️`}
+];
+const page = document.getElementById('page');
+const counter = document.getElementById('counter');
+const nav = document.getElementById('nav');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const dots = document.getElementById('dots');
+let current = 0;
+const total = messages.length + 2;
+function safeText(tag, className, text) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  el.textContent = text;
+  return el;
+}
+function render() {
+  page.replaceChildren();
+  page.className = 'page';
+  if (current === 0) {
+    page.append(safeText('div','flower','🌷 ✿ 🌼'));
+    page.append(safeText('div','eyebrow','A little scrapbook of appreciation'));
+    page.append(safeText('h1','','For Hazel'));
+    page.append(safeText('div','script','with love from your Chem & CLICK team'));
+    page.append(safeText('p','cover-copy',"For the effort you gave, the ideas you helped bring to life, and the way you made this team feel like a team. Here are a few words from the people who got to be part of it with you."));
+    page.append(safeText('div','sticker','you did more than you know ♡'));
+    const b=safeText('button','primary','Open your scrapbook →'); b.onclick=()=>go(1); page.append(b);
+    counter.textContent='Cover';
+    nav.hidden=true; dots.hidden=true;
+  } else if (current <= messages.length) {
+    const m=messages[current-1];
+    page.classList.add('message-page');
+    const head=document.createElement('div'); head.className='message-head';
+    head.append(safeText('div','flower',['🌸','🌼','🌷','🌻','💐','🌺','🌿'][current-1]));
+    head.append(safeText('div','eyebrow',`A note from your teammate · ${current} of ${messages.length}`));
+    head.append(safeText('h2','',m.name));
+    head.append(safeText('div','message-tag','a little reminder, just for you'));
+    page.append(head);
+    const body=safeText('div','message-body'+(m.text.length<70?' short':m.text.length>1800?' long':''),m.text);
+    page.append(body);
+    page.append(safeText('div','message-footer','you are appreciated ✿'));
+    counter.textContent=`Message ${current} of ${messages.length}`;
+    nav.hidden=false; dots.hidden=false;
+  } else {
+    page.append(safeText('div','flower','🌷 💗 🌼'));
+    page.append(safeText('div','eyebrow','One last thing'));
+    page.append(safeText('h2','','Dear Hazel,'));
+    page.append(safeText('p','cover-copy',"You don't have to do everything perfectly to have made a difference. The people beside you noticed your effort, your patience, your ideas, and the way you made room for them. One difficult moment or one person's criticism cannot erase all of that. We hope you can look back on this project and feel proud—not because every single thing went perfectly, but because you showed up, cared, and brought people together."));
+    page.append(safeText('div','sticker','thank you for being our ketua ♡'));
+    page.append(safeText('p','script','With appreciation, from all seven of us'));
+    const b=safeText('button','primary','Read the messages again ↺'); b.onclick=()=>go(0); page.append(b);
+    counter.textContent='The final note';
+    nav.hidden=false; dots.hidden=false;
+  }
+  prev.disabled=current===0;
+  next.textContent=current===total-1?'Back to cover ↺':current===0?'Begin →':'Next page →';
+  next.onclick=()=>go(current===total-1?0:current+1);
+  prev.onclick=()=>go(Math.max(0,current-1));
+  dots.replaceChildren();
+  for(let i=1;i<=messages.length;i++){
+    const d=safeText('button','dot'+(current===i?' active':''),'');
+    d.setAttribute('aria-label',`Open ${messages[i-1].name}'s message`);
+    d.title=messages[i-1].name; d.onclick=()=>go(i); dots.append(d);
+  }
+}
+function go(n){current=Math.max(0,Math.min(total-1,n));render();window.scrollTo({top:0,behavior:'smooth'});}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&!nav.hidden)go(current===total-1?0:current+1);if(e.key==='ArrowLeft'&&!nav.hidden)go(Math.max(0,current-1));});
+render();
+</script>
+</body>
+</html>
